@@ -33,6 +33,7 @@ jobPostings = searchResult.find_all('div', class_='jobsearch-SerpJobCard')
 print('\n')
 
 # Iterate through the jobPostings variable and cherry pick information, such as job title, company, location, post date
+# This is only for indeed. Monster has a similar setup for their info in their html, but need to get exact elements and classes.
 for job in jobPostings:
 
 	jobTitle = job.find('h2', class_='title')
